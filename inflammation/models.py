@@ -43,6 +43,7 @@ def daily_min(data):
     """
     return np.min(data, axis=0)
 
+
 # TODO(lesson-design) Add Patient class
 # TODO(lesson-design) Implement data persistence
 # TODO(lesson-design) Add Doctor class
