@@ -1,0 +1,10 @@
+name: patient
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - matplotlib
+  - pytest
+  - pytest-cov
+prefix: C:\Users\Agis\anaconda3\envs\patient
