@@ -2,7 +2,7 @@ name: patient
 channels:
   - defaults
 dependencies:
-  - python=3.9
+  - python
   - numpy
   - matplotlib
   - pytest
