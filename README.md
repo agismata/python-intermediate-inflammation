@@ -1,25 +1,27 @@
-# PatientDB
+# Inflam
+Inflam is a data management system written in Python that manages trial data used in clinical inflammation studies.
 
-A template repository for the Intermediate Python Development course.
+## Main features
 
-## Purpose
+Here are some key features of Inflam:
 
-This repository is intended to be used as a template which is copied by learners at a Intermediate Python Development workshop.
-This can be done using the `Use this template` button towards the top right of this repo's GitHub page.
+- Provide basic statistical analyses over clinical trial data
+- Ability to work on trial data in Comma-Separated Value (CSV) format
+- Generate plots of trial data
+- Analytical functions and views can be easily extended based on its Model-View-Controller architecture
 
-## TODOs
+## Prerequisites
 
-In a number of places, `TODO` comments indicate where code may be added during the
-workshop as the necessary topics are introduced.
-Each `TODO` comment should refer to a particular section of the workshop:
+Inflam requires the following Python packages:
 
-- `TODO(lesson-collaborative)` - refers to the lesson titled 'Collaborative Software Development'
-- `TODO(lesson-robust)` - refers to the lesson titled 'Writing Robust Software'
-- `TODO(lesson-design)` - refers to the lesson titles 'Software Design in Python'
+- [NumPy](https://www.numpy.org/) - makes use of NumPy's statistical functions
+- [Matplotlib](https://matplotlib.org/stable/index.html) - uses Matplotlib to generate statistical plots
 
-## Tests
+The following optional packages are required to run Inflam's unit tests:
 
-Several tests have been implemented already, some of which are currently failing.
-These failing tests set out the requirements for the additional code to be implemented during the workshop.
+- [pytest](https://docs.pytest.org/en/stable/) - Inflam's unit tests are written using pytest
+- [pytest-cov](https://pypi.org/project/pytest-cov/) - Adds test coverage stats to unit testing
 
-The tests should be run using pytest, which will be introduced during the workshop.
+# Inflam
+
+![build](https://github.com/agismata/python-intermediate-inflammation/workflows/CI/badge.svg?branch=main)
