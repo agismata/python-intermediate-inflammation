@@ -5,6 +5,7 @@ import numpy.testing as npt
 import pytest
 
 
+
 def test_daily_mean_zeros():
     """Test that mean function works for an array of zeros."""
     from inflammation.models import daily_mean
@@ -175,13 +176,3 @@ def test_daily_min(test, expected):
         ),
     ])
 
-def test_patient_normalise(test, expected, raises):
-    """Test normalisation works for arrays of one and positive integers."""
-    from inflammation.models import patient_normalise
-    if isinstance(test, list):
-        test = np.array(test)
-    if raises:
-        with pytest.raises(raises):
-            npt.assert_almost_equal(patient_normalise(test), np.array(expected), decimal=2)
-    else:
-        npt.assert_almost_equal(patient_normalise(test), np.array(expected), decimal=2)

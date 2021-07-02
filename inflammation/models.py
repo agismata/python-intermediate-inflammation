@@ -43,7 +43,6 @@ def daily_min(data):
     """
     return np.min(data, axis=0)
 
-# TODO(lesson-design) Add Patient class
 def patient_normalise(data):
     """
     Normalise patient data between 0 and 1 of a 2D inflammation data array.
@@ -65,6 +64,44 @@ def patient_normalise(data):
         normalised = data / max[:, np.newaxis]
     normalised[np.isnan(normalised)] = 0
     return normalised
+
+# TODO(lesson-design) Add Patient class
+
+
+class Patient:
+    def __init__(self, name, observations=None):
+        self.name = name
+        if observations is None:
+            self.observations = []
+        else:
+            self.observations = observations
+
+    def add_observation(self, infl_m):
+        self.observations.append(infl_m)
+
+    def display_patient(patient):
+        """Display data for a single patient."""
+        print(patient.name)
+        print(patient.observations)
+
+class Doctor:
+    def __init__(self, name):
+        self.name = name
+        self.patients = []
+        self.patients_name = []
+
+    def add_patient(self, name, observations):
+        new_patient = Patient(name,observations)
+
+        self.patients.append(new_patient)
+        self.patients_name.append(new_patient.name)
+        return new_patient
+
+    def __str__(self):
+        return self.name
+
+    def patient_list(self):
+        return self.patients_name
 
 # TODO(lesson-design) Implement data persistence
 # TODO(lesson-design) Add Doctor class
